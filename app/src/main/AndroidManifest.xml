@@ -106,6 +106,12 @@
             android:resizeableActivity="true"
             android:theme="@style/Media" />
 
+        <receiver android:name=".JacocoInstrument.SMSInstrumentedReceiver">
+            <intent-filter>
+                <action android:name="edu.gatech.m3.emma.COLLECT_COVERAGE" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
